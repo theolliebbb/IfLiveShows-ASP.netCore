@@ -8,3 +8,5 @@
 - Authentication
 
 - Google Maps integration
+
+-SQLite
