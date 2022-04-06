@@ -1,0 +1,41 @@
+@model IFLiveShows.Models.Live
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Live</h4>
+    <hr />
+    <dl class="row">
+
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Venue)
+        </dd>
+
+        <dd class="col-sm-10">
+            <a href="@Html.DisplayFor(model => model.TicketUrl)"><h4>チケット</h4></a>
+        </dd>
+        <dd class="col-sm-10">
+            <img src="@Html.DisplayFor(model => model.ImageUrl)" width="600" height="450"></img>
+        </dd>
+        <dd class="col-sm-10">
+            <iframe src="@Html.DisplayFor(model => model.MapsUrl)" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </dd>
+    </dl>
+</divstyle="width:>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
